@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">NKI Calculator</string>
+    <string name="title_activity_main2">Main2Activity</string>
+    <string name="calories">calories</string>
+    <string name="select"></string>
+    <string name="select_date">Select Date</string>
+    <string name="Total">Total</string>
+    <string name="save">save</string>
+    <string name="calculate">Calculate</string>
+    <string name="nki">Net Calorie Intake:</string>
+    <string name="date">Date</string>
+    <string-array name="FoodCategories">
+        <item>Select Food…</item>
+        <item>Breakfast</item>
+        <item>Lunch</item>
+        <item>Dinner</item>
+        <item>Snack</item>
+    </string-array>
+    <string-array name="ExerciseCategories">
+        <item>Select Excercise…</item>
+        <item>Running</item>
+        <item>Jogging</item>
+        <item>Walking</item>
+    </string-array>
+</resources>

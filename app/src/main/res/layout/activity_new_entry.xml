@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".NewEntry"
+    >
+    <include
+        android:id="@+id/entryToolbar"
+        layout="@layout/toolbar">
+
+    </include>
+
+    <TextView
+        android:id="@+id/date"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:ems="10"
+        android:hint="@string/select_date"
+        android:layout_margin="4dp"
+        android:layout_below="@id/entryToolbar"
+        android:gravity="center_vertical"/>
+
+
+    <LinearLayout
+        android:id="@+id/Linear1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/date">
+
+        <Spinner
+            android:id="@+id/foodCateg1"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_weight="2"
+            android:layout_margin="4dp"/>
+
+        <EditText
+            android:id="@+id/foodCal1"
+            android:layout_width="45dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="5dp"
+            android:ems="10"
+            android:hint="@string/calories"
+            android:inputType="number" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/Linear2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/Linear1">
+
+        <Spinner
+            android:id="@+id/foodCateg2"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_weight="2"
+            android:layout_margin="5dp"/>
+
+        <EditText
+            android:id="@+id/foodCal2"
+            android:layout_width="45dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="5dp"
+            android:ems="10"
+            android:hint="@string/calories"
+            android:inputType="number" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/Linear3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/Linear2">
+
+        <Spinner
+            android:id="@+id/excerciseCateg_1"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_weight="2"
+            android:layout_margin="4dp"/>
+
+        <EditText
+            android:id="@+id/excerciseCal_1"
+            android:layout_width="45dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="4dp"
+            android:ems="10"
+            android:hint="@string/calories"
+            android:inputType="number" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/Linear4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/Linear3">
+
+        <Spinner
+            android:id="@+id/excerciseCateg_2"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_weight="2"
+            android:layout_margin="5dp"/>
+
+        <EditText
+            android:id="@+id/excerciseCal_2"
+            android:layout_width="45dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="4dp"
+            android:ems="10"
+            android:hint="@string/calories"
+            android:inputType="number"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/Linear5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/Linear4">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_weight="2"
+            android:layout_margin="4dp"
+            android:text="@string/nki"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/total"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:layout_margin="4dp"
+            android:text="@string/Total"
+            android:gravity="center"/>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/save"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="@string/save"
+        android:layout_below="@id/calculate"
+        android:layout_margin="4dp"
+        android:layout_centerHorizontal="true" />
+    <Button
+        android:id="@+id/calculate"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="@string/calculate"
+        android:layout_below="@id/Linear5"
+        android:layout_centerHorizontal="true"
+        android:onClick="calculateNKI"/>
+
+</RelativeLayout>
