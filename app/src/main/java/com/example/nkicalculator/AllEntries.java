@@ -1,11 +1,9 @@
 package com.example.nkicalculator;
 
 import java.util.ArrayList;
-import java.util.Date;
 
 public class AllEntries {
     public static ArrayList<SingleEntry> entries;
-    public static SingleEntry entry;
 
     public static ArrayList<SingleEntry> getEntries() {
 
@@ -26,13 +24,17 @@ public class AllEntries {
         entries.add(entry);
     }
 
-    public class SingleEntry {
+    public static int size() {
+        if (entries == null) {
+            entries = new ArrayList<SingleEntry>();
+        }
 
-        private String foodKJTotal;
-        private String excerciseKJTotal;
-        private Date date;
+        return entries.size();
+    }
 
-
-
+    public static void clearEntries() {
+        if (entries != null) {
+            entries.clear();
+        }
     }
 }

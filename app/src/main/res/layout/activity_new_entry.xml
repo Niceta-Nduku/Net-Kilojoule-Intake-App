@@ -159,7 +159,8 @@
         android:text="@string/save"
         android:layout_below="@id/calculate"
         android:layout_margin="4dp"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:onClick="saveEntry"/>
     <Button
         android:id="@+id/calculate"
         android:layout_width="200dp"

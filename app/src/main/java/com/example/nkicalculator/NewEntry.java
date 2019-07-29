@@ -95,6 +95,10 @@ public class NewEntry extends AppCompatActivity implements DatePickerDialog.OnDa
     }
 
     public void calculateNKI(View v){
+        calculateNKI(this);
+    }
+
+    public void calculateNKI(NewEntry v){
 
         String food1 = foodKJ_1.getText().toString();
         String food2 = foodKJ_2.getText().toString();
@@ -116,7 +120,13 @@ public class NewEntry extends AppCompatActivity implements DatePickerDialog.OnDa
     }
 
     public void saveEntry(View view){
-        AllEntries.SingleEntry entry = new AllEntries.SingleEntry()
+
+        calculateNKI(this);
+
+        SingleEntry entry = new SingleEntry(foodTotal,excerciseTotal,date.getText().toString());
+        AllEntries.addEntry(entry);
+
+        Toast.makeText(this, "Entry saved!", Toast.LENGTH_SHORT).show();
 
         finish();
     }
