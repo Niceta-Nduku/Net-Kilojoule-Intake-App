@@ -12,23 +12,22 @@
 
     </include>
 
-    <androidx.recyclerview.widget.RecyclerView
+    <android.support.v7.widget.RecyclerView
         android:id="@+id/entryView"
+        android:scrollbars="vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/mainToolbar"
-        android:background="@color/colorPrimaryDark"
-        android:padding="4dp"
-        android:scrollbars="vertical"/>
+        android:padding="4dp"/>
 
     <TextView
         android:id="@+id/Average"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/entryView"
-        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
         android:layout_marginTop="24dp"
-        android:text="Your Average:" />
+        android:text="@string/your_average" />
 
     <TextView
         android:id="@+id/calcAvg"
@@ -36,9 +35,9 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/entryView"
         android:layout_marginTop="24dp"
-        android:layout_toRightOf="@id/Average"
-        android:layout_marginLeft="12dp"
-        android:text="Calculated average" />
+        android:layout_toEndOf="@id/Average"
+        android:layout_marginStart="12dp"
+        android:text="@string/calculated_average" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/calculator_Launcher"

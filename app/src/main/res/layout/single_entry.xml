@@ -21,9 +21,10 @@
             android:textSize="20sp"
             android:textStyle="bold" />
         <TextView
+            android:id="@+id/nkiValue"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_toLeftOf="@id/NKI"
+            android:layout_toStartOf="@id/NKI"
             android:textColor="@android:color/black"
             android:textSize="20sp"
             android:textStyle="bold" />
