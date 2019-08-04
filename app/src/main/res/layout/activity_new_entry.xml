@@ -7,6 +7,7 @@
     android:orientation="vertical"
     tools:context=".NewEntry"
     >
+
     <include
         android:id="@+id/entryToolbar"
         layout="@layout/toolbar">
@@ -14,14 +15,18 @@
     </include>
 
     <TextView
-        android:id="@+id/date"
+        android:id="@+id/select_date"
         android:layout_width="match_parent"
         android:layout_height="45dp"
         android:ems="10"
         android:hint="@string/select_date"
         android:layout_margin="4dp"
         android:layout_below="@id/entryToolbar"
-        android:gravity="center_vertical"/>
+        android:gravity="center_vertical"
+        android:paddingStart="8dp"
+        android:textColor="@android:color/black"
+        android:textSize="15sp"
+        android:textStyle="bold"/>
 
 
     <LinearLayout
@@ -29,7 +34,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_below="@id/date">
+        android:layout_below="@id/select_date"
+        android:paddingStart="8dp">
 
         <Spinner
             android:id="@+id/foodCateg1"
@@ -54,7 +60,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_below="@id/Linear1">
+        android:layout_below="@id/Linear1"
+        android:paddingStart="8dp">
 
         <Spinner
             android:id="@+id/foodCateg2"
@@ -79,7 +86,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_below="@id/Linear2">
+        android:layout_below="@id/Linear2"
+        android:paddingStart="8dp">
 
         <Spinner
             android:id="@+id/excerciseCateg_1"
@@ -104,7 +112,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_below="@id/Linear3">
+        android:layout_below="@id/Linear3"
+        android:paddingStart="8dp">
 
         <Spinner
             android:id="@+id/excerciseCateg_2"
@@ -130,44 +139,131 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_below="@id/Linear4">
+        android:layout_below="@id/Linear4"
+        android:paddingStart="8dp">
 
         <TextView
-            android:id="@+id/textView"
-            android:layout_width="wrap_content"
+            android:id="@+id/foodView"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_weight="2"
+            android:layout_margin="4dp"
+            android:text="@string/food_total"
+            android:gravity="center_vertical"
+            android:textColor="@android:color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/foodTotal"
+            android:layout_width="45dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:layout_margin="4dp"
+            android:text="@string/Total"
+            android:gravity="center"
+            android:textColor="@android:color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/Linear6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/Linear5"
+        android:paddingStart="8dp">
+
+        <TextView
+            android:id="@+id/excerciseView"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_weight="2"
+            android:layout_margin="4dp"
+            android:text="@string/excercise_total"
+            android:gravity="center_vertical"
+            android:textColor="@android:color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/excerciseTotal"
+            android:layout_width="45dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:layout_margin="4dp"
+            android:text="@string/Total"
+            android:gravity="center"
+            android:textColor="@android:color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/Linear7"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/Linear6"
+        android:paddingStart="8dp">
+
+        <TextView
+            android:id="@+id/nkiView"
+            android:layout_width="45dp"
             android:layout_height="45dp"
             android:layout_weight="2"
             android:layout_margin="4dp"
             android:text="@string/nki"
-            android:gravity="center"/>
+            android:gravity="center_vertical"
+            android:textColor="@android:color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"/>
 
         <TextView
-            android:id="@+id/total"
+            android:id="@+id/nkiTotal"
             android:layout_width="wrap_content"
             android:layout_height="40dp"
             android:layout_weight="1"
             android:layout_margin="4dp"
             android:text="@string/Total"
-            android:gravity="center"/>
+            android:gravity="center"
+            android:textColor="@android:color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"/>
 
     </LinearLayout>
-
-    <Button
-        android:id="@+id/save"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:text="@string/save"
-        android:layout_below="@id/calculate"
-        android:layout_margin="4dp"
-        android:layout_centerHorizontal="true"
-        android:onClick="saveEntry"/>
     <Button
         android:id="@+id/calculate"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:text="@string/calculate"
-        android:layout_below="@id/Linear5"
+        android:layout_below="@id/Linear7"
         android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
         android:onClick="calculateNKI"/>
+
+    <Button
+        android:id="@+id/cancel"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/calculate"
+        android:layout_marginStart="75dp"
+        android:layout_marginTop="16dp"
+        android:onClick="cancel"
+        android:text="@string/cancel" />
+
+    <Button
+        android:id="@+id/save"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/calculate"
+        android:layout_marginStart="45dp"
+        android:layout_marginTop="16dp"
+        android:layout_toEndOf="@id/cancel"
+        android:onClick="saveEntry"
+        android:text="@string/save" />
 
 </RelativeLayout>

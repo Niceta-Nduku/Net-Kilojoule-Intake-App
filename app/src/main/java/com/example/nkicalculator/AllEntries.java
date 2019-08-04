@@ -21,7 +21,7 @@ public class AllEntries {
             entries = new ArrayList<SingleEntry>();
         }
 
-        entries.add(entry);
+        entries.add(0,entry);
     }
 
     public static int size() {

@@ -1,16 +1,19 @@
 <resources>
-    <string name="app_name">NKI Calculator</string>
+    <string name="app_name" translatable="false">NKI Calculator</string>
     <string name="title_activity_main2">Main2Activity</string>
-    <string name="calories">Kilojoules</string>
+    <string name="calories" translatable="false">Kilojoules</string>
     <string name="select"> select </string>
     <string name="select_date">Select Date</string>
     <string name="Total">Total</string>
     <string name="save">save</string>
     <string name="calculate">Calculate</string>
-    <string name="nki">Net Kilojoules Intake:</string>
+    <string name="nki" translatable="false">Net Kilojoules Intake:</string>
     <string name="date">Date</string>
     <string name="your_average">Your Average:</string>
     <string name="calculated_average">Calculated average</string>
+    <string name="cancel">cancel</string>
+    <string name="excercise_total">Exercise Total:</string>
+    <string name="food_total">Food Total:</string>
     <string-array name="FoodCategories">
         <item>Select Food…</item>
         <item>Breakfast</item>
@@ -24,4 +27,8 @@
         <item>Jogging</item>
         <item>Walking</item>
     </string-array>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="fill">Fill all fields</string>
 </resources>

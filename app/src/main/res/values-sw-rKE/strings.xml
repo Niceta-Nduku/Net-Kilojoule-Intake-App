@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">NKI Calculator</string>
+    <string name="Total">Yote</string>
+    <string name="calculate">Hesabu</string>
+    <string name="excercise_total">"Tizi "</string>
+    <string name="date">Tarehe</string>
+    <string name="cancel">Futa</string>
+    <string name="your_average">Wastani Yako</string>
+    <string name="food_total">Chakula</string>
+    <string name="calculated_average">Wastani</string>
+    <string name="save">Hifadhi</string>
+    <string name="select_date">Chagua Tarehe</string>
+</resources>
