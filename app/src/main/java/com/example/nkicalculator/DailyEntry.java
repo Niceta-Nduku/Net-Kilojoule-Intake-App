@@ -46,7 +46,7 @@ public class DailyEntry extends AppCompatActivity {
     protected void onStart() {
         entries = AllEntries.getEntries();
         adapter.notifyDataSetChanged();
-        viewPager.setCurrentItem(entries.size());
+        //viewPager.setCurrentItem(entries.size());
         super.onStart();
     }
 
@@ -62,7 +62,7 @@ public class DailyEntry extends AppCompatActivity {
             viewPager.setCurrentItem(position);
         }
         else{
-            Toast.makeText(this, "Last Entry", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, R.string.last_entry, Toast.LENGTH_SHORT).show();
             position=entries.size()-1;
         }
     }
@@ -73,7 +73,7 @@ public class DailyEntry extends AppCompatActivity {
             viewPager.setCurrentItem(position);
         }
         else {
-            Toast.makeText(this, "No new Entry", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, R.string.no_entry, Toast.LENGTH_SHORT).show();
             position=0;
         }
     }

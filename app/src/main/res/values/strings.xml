@@ -1,7 +1,6 @@
 <resources>
     <string name="app_name" translatable="false">NKI Calculator</string>
-    <string name="title_activity_main2">Main2Activity</string>
-    <string name="calories" translatable="false">Kilojoules</string>
+    <string name="calories">Kilojoules</string>
     <string name="select"> select </string>
     <string name="select_date">Select Date</string>
     <string name="Total">Total</string>
@@ -29,6 +28,10 @@
     </string-array>
 
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="fill">Fill all fields</string>
+    <string name="no_entry">No new Entry</string>
+    <string name="last_entry">Last Entry</string>
+    <string name="entry_saved">Entry saved!</string>
+    <string name="fill_all">Fill all fields</string>
+    <string name="canelled">Cancelled</string>
 </resources>

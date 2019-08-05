@@ -145,23 +145,22 @@ public class NewEntry extends AppCompatActivity implements DatePickerDialog.OnDa
         calculateNKI();
 
         if (calculated = true && food_1.getSelectedItemPosition()!=0 && food_2.getSelectedItemPosition()!=0 &&
-                excercise_1.getSelectedItemPosition()!=0 && excercise_2.getSelectedItemPosition()!=0){
-
+                excercise_1.getSelectedItemPosition()!=0 && excercise_2.getSelectedItemPosition()!=0 && date.getText().toString()!= ""){
 
             SingleEntry entry = new SingleEntry(foodTotal, excerciseTotal,date.getText().toString());
             AllEntries.addEntry(entry);
 
-            Toast.makeText(this, "Entry saved!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, R.string.entry_saved, Toast.LENGTH_SHORT).show();
             finish();
         }
 
         else{
-            Toast.makeText(this, "Fill all fields", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, R.string.fill_all, Toast.LENGTH_SHORT).show();
         }
     }
 
     public  void cancel(View view){
-        Toast.makeText(this, "Cancelled", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, R.string.canelled, Toast.LENGTH_SHORT).show();
         Intent myIntent = new Intent(this,
                 MainActivity.class);
         startActivity(myIntent);
